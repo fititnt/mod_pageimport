@@ -3,45 +3,60 @@
 	type="module"
 	method="upgrade"
 	version="1.6">
-	<name>MOD_SHOWMD5HASHSALT</name>
+	<name>mod_pageimport</name>
 	<author>Emerson Rocha Luiz</author>
 	<creationDate>July 2011</creationDate>
-	<copyright>Copyright (C) Joomla! Coders Brazil - @JCoderBR. All rights reserved.</copyright>
+	<copyright>Copyright (C) 2005 - 2011 Webdesign Assessoria em Tecnologia da Informacao.</copyright>
 	<license>GNU General Public License version 3</license>
 	<authorEmail>emerson@webdesign.eng.br</authorEmail>
 	<authorUrl>http://fititnt.org</authorUrl>
 	<version>0.2beta</version>
-	<description>MOD_SHOWMD5HASHSALT_XML_DESCRIPTION</description>
+	<description>MOD_PAGEIMPORT_XML_DESCRIPTION</description>
 	<files>
-		<filename module="mod_showmd5salthash">mod_showmd5salthash.php</filename>
+		<filename module="mod_pageimport">mod_pageimport.php</filename>
                 <filename>helper.php</filename>
 		<filename>index.html</filename>
                 <filename>readme.txt</filename>
                 <filename>changelog.txt</filename>
+                <filename>simple_html_dom.php</filename>
 		<folder>tmpl</folder>
-                <folder>languages</folder><!-- This makes one copy of languages. Is not really necessary-->
+                <folder>languages</folder>
 	</files>
 	<languages folder="languages">
-		<language tag="en-GB">en-GB/en-GB.mod_showmd5salthash.ini</language>
-		<language tag="en-GB">en-GB/en-GB.mod_showmd5salthash.sys.ini</language>
-		<language tag="pt-BR">pt-BR/pt-BR.mod_showmd5salthash.ini</language>
-		<language tag="pt-BR">pt-BR/pt-BR.mod_showmd5salthash.sys.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_pageimport.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_pageimport.sys.ini</language>
 	</languages>
 		
 	<config>
 		<fields name="params">
 			<fieldset name="basic">
 				<field
+					name="url"
+					type="text"
+                                        site="45"
+					label="MOD_PAGEIMPORT_URL_LABEL"
+					description="MOD_PAGEIMPORT_URL_DESC"
+					default="">
+				</field>
+                                <field
+					name="moduleclass_sfx"
+					type="text"
+					label="MOD_PAGEIMPORT_MODULECLASSSFX_LABEL"
+					description="MOD_PAGEIMPORT_MODULECLASSSFX_DESC"
+					default="">
+				</field>
+                                <field
 					name="advanced"
 					type="radio"
-					label="MOD_SHOWMD5SALTHASH_SHOW_MORE_OPTIONS_LABEL"
-					description="MOD_SHOWMD5SALTHASH_SHOW_MORE_OPTIONS_DESC"
+					label="MOD_PAGEIMPORT_SHOW_MORE_OPTIONS_LABEL"
+					description="MOD_PAGEIMPORT_SHOW_MORE_OPTIONS_DESC"
 					default="1">
 					<option
 						value="0">JNo</option>
 					<option
 						value="1">JYes</option>
-				</field>					
+				</field>
+                                
 			</fieldset>
 		</fields>
 	</config>
